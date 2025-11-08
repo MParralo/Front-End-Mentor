@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <script src="src/script.js" defer></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="icon" href="images/favicon-32x32.png">
+</head>
+
+<body class="bg-gray-950 flex items-center h-dvh">
+    <article id="article1" class="bg-linear-to-b from-Grey-900 to-Grey-950 max-w-sm rounded-2xl mx-auto p-8 flex flex-col gap-6 shadow-md mt-4 min-h-[450px] max-h-[450px]">
+
+        <figure>
+            <img class="p-4 bg-Grey-900 rounded-full shadow-md" src="images/icon-star.svg" alt="">
+        </figure>
+
+        <div>
+            <h2 class="text-White text-2xl font-bold mb-4">How did we do?</h2>
+
+            <p class="text-gray-500">Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!</p>
+        </div>
+
+        <div class="flex justify-between my-2">
+            <button class="buttons">1</button>
+            <button class="buttons">2</button>
+            <button class="buttons">3</button>
+            <button class="buttons">4</button>
+            <button class="buttons">5</button>
+        </div>
+
+        <button id="submit" class="text-black bg-Orange-500 py-4 w-full rounded-4xl font-bold text-lg tracking-widest shadow-md hover:bg-White cursor-pointer mb-4">SUBMIT</button>
+
+    </article>
+
+    <article id="article2" class="hidden mt-4 bg-linear-to-b from-Grey-900 to-Grey-950 max-w-sm min-w-sm rounded-2xl mx-auto p-8 flex-col gap-6 shadow-md flex items-center max-h-[450px] min-h-[450px]">
+        <figure class="mt-4 mb-2">
+            <img src="images/illustration-thank-you.svg" alt="">
+        </figure>
+
+        <p id="result" class="text-Orange-500 bg-Grey-900 py-2 px-4 rounded-3xl"></p>
+
+        <h2 class="text-White text-3xl mt-4">Thank you!</h2>
+
+        <p class="text-Grey-500 text-center mb-2">We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+
+    </article>
+</body>
+</html>

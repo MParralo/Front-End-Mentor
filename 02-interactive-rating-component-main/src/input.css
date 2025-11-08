@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+    --color-White: hsl(0, 100%, 100%);
+    --color-Grey-500: hsl(217, 12%, 63%);
+    --color-Grey-900: hsl(213, 19%, 18%);
+    --color-Grey-950: hsl(216, 12%, 8%);
+    --color-Orange-500: hsl(25, 97%, 53%);
+
+    --shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.25); 
+
+
+
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+.buttons {
+    @apply size-12 bg-Grey-900 rounded-full text-Grey-500 shadow-md;
+
+}
+
+.buttons:hover {
+    @apply bg-Orange-500 text-Grey-950 cursor-pointer;
+}
+
+.buttons:focus {
+    @apply bg-white text-Grey-950;
+}
