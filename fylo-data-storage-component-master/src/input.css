@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+    --color-Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    --color-Blue-200: hsl(243, 100%, 93%);
+    --color-Grayish-Blue: hsl(229, 7%, 55%);
+    --color-Blue-850: hsl(228, 56%, 26%);
+    --color-Blue-950: hsl(229, 57%, 11%);
+    --color-Blue-950-opacity: hsl(229, 57%, 11%, 0.5);
+    --breakpoint-xs: 315px;
+    --breakpoint-xss: 250px;
+
+    --font-sans: "Raleway", sans-serif;
+    
+}
+
+body {
+  @apply h-dvh w-full flex justify-center items-center font-sans;
+}
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+}
+
+.group-icons {
+    @apply bg-Blue-950 rounded-xl w-full flex justify-center h-full p-3 xs:py-4 xs:p-1;
+}
+
+.img-icon {
+    @apply text-center object-contain w-full xs:w-2/4;
+}
+
+.section1 {
+    @apply flex xs:w-[72%] xss:w-[85%] w-full gap-4 items-center justify-center;
+}
