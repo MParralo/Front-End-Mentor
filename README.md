@@ -1,6 +1,6 @@
 # 🚀 Frontend Mentor Challenges Portfolio
 
-My solutions to Frontend Mentor challenges, focusing on modern frontend practices, responsive design, and the use of **Tailwind CSS**.
+Mi colección de soluciones para los desafíos de Frontend Mentor, creadas y estilizadas exclusivamente con Tailwind CSS y tecnologías frontend modernas.
 
 ## 📂 Challenge Demos
 
