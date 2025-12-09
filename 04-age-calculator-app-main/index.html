@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'purple-primary': 'hsl(259, 100%, 65%)',
+            'red-error': 'hsl(0, 100%, 67%)',
+            'grey-100': 'hsl(0, 0%, 94%)',
+            'grey-200': 'hsl(0, 0%, 86%)',
+            'grey-500': 'hsl(0, 1%, 44%)',
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-grey-100 font-poppins min-h-screen flex items-center justify-center p-4">
+  <main
+    class="bg-white rounded-3xl rounded-br-[100px] md:rounded-br-[200px] p-6 md:p-14 w-full max-w-[343px] md:max-w-[840px]">
+    <form id="ageForm" class="border-b border-grey-200 pb-8 md:pb-12">
+      <div class="flex gap-4 md:gap-8">
+        <div class="flex-1 max-w-[88px] md:max-w-[160px]">
+          <label for="day" class="block text-grey-500 text-xs md:text-sm font-bold tracking-[0.25em] mb-1 md:mb-2"
+            id="dayLabel">DAY</label>
+          <input type="text" id="day" placeholder="DD" maxlength="2"
+            class="w-full border border-grey-200 rounded-lg px-4 md:px-6 py-3 md:py-4 text-xl md:text-[32px] font-bold focus:outline-none focus:border-purple-primary cursor-pointer">
+          <p class="text-red-error text-xs md:text-sm italic mt-1 md:mt-2 hidden" id="dayError"></p>
+        </div>
+
+        <div class="flex-1 max-w-[88px] md:max-w-[160px]">
+          <label for="month" class="block text-grey-500 text-xs md:text-sm font-bold tracking-[0.25em] mb-1 md:mb-2"
+            id="monthLabel">MONTH</label>
+          <input type="text" id="month" placeholder="MM" maxlength="2"
+            class="w-full border border-grey-200 rounded-lg px-4 md:px-6 py-3 md:py-4 text-xl md:text-[32px] font-bold focus:outline-none focus:border-purple-primary cursor-pointer">
+          <p class="text-red-error text-xs md:text-sm italic mt-1 md:mt-2 hidden" id="monthError"></p>
+        </div>
+
+        <div class="flex-1 max-w-[88px] md:max-w-[160px]">
+          <label for="year" class="block text-grey-500 text-xs md:text-sm font-bold tracking-[0.25em] mb-1 md:mb-2"
+            id="yearLabel">YEAR</label>
+          <input type="text" id="year" placeholder="YYYY" maxlength="4"
+            class="w-full border border-grey-200 rounded-lg px-4 md:px-6 py-3 md:py-4 text-xl md:text-[32px] font-bold focus:outline-none focus:border-purple-primary cursor-pointer">
+          <p class="text-red-error text-xs md:text-sm italic mt-1 md:mt-2 hidden" id="yearError"></p>
+        </div>
+      </div>
+    </form>
+
+    <div class="relative flex justify-center md:justify-end -mt-8 md:-mt-12 mb-8 md:mb-0">
+      <button type="submit" form="ageForm"
+        class="bg-purple-primary hover:bg-black w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center transition-colors duration-300 z-10"
+        aria-label="Calculate age">
+        <img src="./assets/images/icon-arrow.svg" alt="" class="w-6 h-6 md:w-11 md:h-11">
+      </button>
+    </div>
+
+    <div class="mt-8 md:mt-12">
+      <div class="text-[56px] md:text-[104px] font-extrabold italic leading-[1.1]">
+        <div class="flex items-baseline">
+          <span class="text-purple-primary" id="yearsResult">--</span>
+          <span class="text-black ml-2">years</span>
+        </div>
+        <div class="flex items-baseline">
+          <span class="text-purple-primary" id="monthsResult">--</span>
+          <span class="text-black ml-2">months</span>
+        </div>
+        <div class="flex items-baseline">
+          <span class="text-purple-primary" id="daysResult">--</span>
+          <span class="text-black ml-2">days</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
